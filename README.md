@@ -99,4 +99,80 @@ Similar to the previous function, the DFS-COLORS function also locates the color
      */
     static bool DFS_colors(Graph g, size_t u, std::vector<int>& colors);
 
+Now we will focus on my public functions:
+
+The first function,IS CONNECTED, checks whether the graph is connected or not.
   
+    /**
+     * @brief Checks if the given graph is connected.
+     * 
+     * This function determines if the graph is connected by performing a BFS traversal from each vertex.
+     * If any vertex cannot be reached from another, the graph is considered disconnected.
+     * 
+     * @param g The graph to check.
+     * @return True if the graph is connected, false otherwise.
+     */
+    static bool isConnected(Graph g);
+
+
+A function to find the minimum distance of all vertices from our starting vertex.  
+
+    /**
+     * @brief Finds the shortest path between two vertices in the graph using the Bellman-Ford algorithm.
+     * 
+     * This function computes the shortest path between two vertices using the Bellman-Ford algorithm.
+     * It returns a string representation of the shortest path from the start vertex to the end vertex.
+     * 
+     * @param g The graph on which to find the shortest path.
+     * @param start The index of the starting vertex.
+     * @param end The index of the destination vertex.
+     * @return A string representing the shortest path from start to end vertex.
+     */
+    static std::string shortestPath(Graph g, size_t start, size_t end);
+
+
+The following function checks whether there is a circle in the graph.
+
+    /**
+     * @brief Checks if the given graph contains a cycle.
+     * 
+     * This function detects cycles in the graph using Depth First Search (DFS).
+     * If a cycle is found, it returns a string representing the cycle; otherwise, it returns "No cycles".
+     * 
+     * @param g The graph to check.
+     * @return A string describing the cycle if found, otherwise "No cycles".
+     */
+    static std::string isContainsCycle(Graph g);
+
+The following function checks whether the graph is bipartite, that is, whether the vertices in the graph can be divided into two groups of vertices so that there is no edge that passes between two vertices from the same group.
+
+
+    /**
+     * @brief Checks if the given graph is bipartite.
+     * 
+     * This function checks if the graph is bipartite by assigning colors to vertices using Depth First Search (DFS).
+     * If the graph is bipartite, it returns a string representing the bipartition; otherwise, it returns "The graph isn't bipartite".
+     * 
+     * @param g The graph to check.
+     * @return A string describing the bipartition if the graph is bipartite, otherwise "The graph isn't bipartite".
+     */
+    static std::string isBipartite(Graph g);
+
+The function looks for a negative circle in the graph, in the middle of which is the Belman-Ford algorithm.
+    
+    /**
+     * @brief Finds a negative cycle in the graph if it exists.
+     * 
+     * This function searches for a negative cycle in the graph using the Bellman-Ford algorithm.
+     * If a negative cycle is found, it returns a string representing the vertices forming the cycle; otherwise, it returns "There isn't a negative cycle".
+     * 
+     * @param g The graph to search for a negative cycle.
+     * @return A string describing the vertices forming the negative cycle if found, otherwise "There isn't a negative cycle".
+     */
+    static std::string negativeCycle(Graph g);
+};
+
+
+If somehow you got this far, first of all, thank you very much!
+And I appreciate you much more now.
+So smile, thank God, and have a successful day.
