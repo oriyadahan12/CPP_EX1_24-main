@@ -63,5 +63,10 @@ The function can work with negative weights and find negative circles in the gra
      */
     static void bellmanFord(Graph g, size_t start, std::vector<int>& d, std::vector<int>& pi);
   
+Another function we will use later is the DFS function.
+This is a deep search function that goes over a vertex and all its children and colors the vertices in several different colors according to their current state (whether we are done with them or not, etc.)
+
+We used this function to find circles in the graph.
+
 
   
