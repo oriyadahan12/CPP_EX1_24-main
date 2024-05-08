@@ -68,5 +68,35 @@ This is a deep search function that goes over a vertex and all its children and 
 
 We used this function to find circles in the graph.
 
+    /**
+     * @brief Performs Depth First Search (DFS) visit on the graph to detect cycles.
+     * 
+     * This function performs a DFS traversal on the graph to detect cycles.
+     * It returns the index of the first vertex encountered in the cycle, or SIZE_MAX if no cycle is found.
+     * 
+     * @param g The graph to perform DFS on.
+     * @param u The index of the current vertex being visited.
+     * @param pi Vector to store the predecessors of each vertex during DFS.
+     * @param colors Vector representing colors of vertices during DFS.
+     * @return Index of the first vertex encountered in the cycle, or SIZE_MAX if no cycle found.
+     */
+    static size_t DFS_VISIT(Graph g, size_t u, std::vector<size_t>& pi, std::vector<int>& colors);
+
+
+Similar to the previous function, the DFS-COLORS function also locates the colors, and we will use it to find a bipartite graph.
+
+
+    /**
+     * @brief Performs Depth First Search (DFS) to check if the graph is bipartite and assigns colors to vertices.
+     * 
+     * This function performs a DFS traversal on the graph to check if it is bipartite.
+     * It assigns colors to vertices and checks if adjacent vertices have different colors.
+     * 
+     * @param g The graph to perform DFS on.
+     * @param u The index of the current vertex being visited.
+     * @param colors Vector representing colors of vertices during DFS.
+     * @return True if the graph is bipartite, false otherwise.
+     */
+    static bool DFS_colors(Graph g, size_t u, std::vector<int>& colors);
 
   
