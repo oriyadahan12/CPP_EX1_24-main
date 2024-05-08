@@ -170,7 +170,7 @@ The function looks for a negative circle in the graph, in the middle of which is
      * @return A string describing the vertices forming the negative cycle if found, otherwise "There isn't a negative cycle".
      */
     static std::string negativeCycle(Graph g);
-};
+    };
 
 
 If somehow you got this far, first of all, thank you very much!
