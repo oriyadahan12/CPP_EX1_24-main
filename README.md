@@ -20,6 +20,21 @@ And I'll start with an explanation of loading a graph into a matrix:
   
      void ariel::Graph::loadGraph(vector<vector<int>>adjacencyMatrix){}
 
+After loading the graph into our matrix, we can start running the methods.
+We will start with simple functions such as printing the graph and finding the number of vertices in the graph.
+
+The print function:
+
+  /*
+   *  @brief Prints information about the graph.
+   * 
+   *  This function prints the number of vertices and edges in the graph.
+   * /
+  
+       void ariel::Graph::printGraph(){}
+
+
+ The function that find the number of vertex in the graph:
 
    
 
