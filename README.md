@@ -44,6 +44,24 @@ The print function:
 
  Now we will continue with the functions with the more complex algorithms that I wrote:
 
+I will start by detailing my privacy functions.
 
+Bellman-Ford function:
+Goes through all the edges n-1 times and makes a placement for each edge on the minimum weight that can be reached in it.
+The function can work with negative weights and find negative circles in the graph (if they exist).
+
+     /**
+     * @brief Applies the Bellman-Ford algorithm to find the shortest paths from a given start vertex.
+     * 
+     * This function computes shortest paths from the start vertex to all other vertices in the graph using the Bellman-Ford algorithm.
+     * It updates the input vectors 'd' and 'pi' to store the shortest distances and predecessors respectively.
+     * 
+     * @param g The graph on which to perform the algorithm.
+     * @param start The index of the starting vertex.
+     * @param d Vector to store the distances from the start vertex to each other vertex.
+     * @param pi Vector to store the predecessors of each vertex in the shortest paths.
+     */
+    static void bellmanFord(Graph g, size_t start, std::vector<int>& d, std::vector<int>& pi);
+  
 
   
